@@ -46,7 +46,7 @@ def main():
                               host=host, db=db_name)
 
     with cnx.cursor() as cursor:
-        cursor.execute('YOUR QUERY GOES HERE;')
+        cursor.execute('SELECT * FROM users;')
         result = cursor.fetchall()
         current_msg = result[0][0]
     cnx.close()
